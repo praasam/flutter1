@@ -31,11 +31,12 @@ class loginpagestate extends State<loginpage>{
         isloading = true;
       });
       // login sucess //go to detail page
-      Navigator.push(
+      /*Navigator.push(
         context,
         MaterialPageRoute(builder: (context) =>
             NewsUi()),
-      );
+      );*/
+      Navigator.of(context).pushNamed('/NewsUi', arguments: false);
     }
 
   }
@@ -111,11 +112,12 @@ class loginpagestate extends State<loginpage>{
                             prefs.setString('email', emailcontroller.text);
                             prefs.setString('password', passwordcontroller.text);
 
-                            Navigator.push(
+                            /*Navigator.push(
                               context,
                               MaterialPageRoute(builder: (context) =>
                                   NewsUi()),
-                            );
+                            );*/
+                            Navigator.of(context).pushNamed('/NewsUi', arguments: false);
                           }else{
                             //show error
 
@@ -137,7 +139,6 @@ class loginpagestate extends State<loginpage>{
                       ),
                     ],
                   )
-
                 ],
               ),
             )
