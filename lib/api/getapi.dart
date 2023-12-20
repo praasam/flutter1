@@ -18,6 +18,7 @@ class GetApi{
       Newsapi data = Newsapi.fromJson(jsonResponse);
       return data;
     }
+
         catch(e){
       return null;
         }

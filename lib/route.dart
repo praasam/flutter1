@@ -18,6 +18,8 @@ class RouteGen{
         return MaterialPageRoute(builder: (_) => NewsUi());
       default:
         return _errorRoute(); //if routing error
+
+
     }
   }
   static Route<dynamic>_errorRoute(){
